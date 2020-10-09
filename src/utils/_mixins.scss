@@ -10,19 +10,43 @@
  * @returns - background: #FFF;
  */
 @mixin theme-aware($key, $color) {
+    $default-data: map-get($themes, default);
+
     @each $theme-name, $theme-color in $themes {
         :global(.theme-#{$theme-name}) & {
-            #{$key}: map-get(map-get($themes, $theme-name), $color);
+            // $theme-data: value map for the theme
+            $theme-data: map-get($themes, $theme-name);
+
+            // $theme-value: value for the theme property
+            $theme-value: map-get($theme-data, $color);
+            // Uses default theme value if value not found in current theme
+            @if (not map-has-key($themes, $color)) {
+                $theme-value: map-get($default-data, $color);
+            }
+
+            #{$key}: $theme-value;
         }
     }
 }
 
 @mixin theme-aware-shadow($values, $color) {
+    $default-data: map-get($themes, default);
+
 	@each $theme-name, $theme-color in $themes {
 		:global(.theme-#{$theme-name}) & {
-			-webkit-box-shadow: $values map-get(map-get($themes, $theme-name), $color);
-			-moz-box-shadow: $values map-get(map-get($themes, $theme-name), $color);
-			box-shadow: $values map-get(map-get($themes, $theme-name), $color);
+            // $theme-data: value map for the theme
+            $theme-data: map-get($themes, $theme-name);
+
+            // $theme-value: value for the theme property
+            $theme-value: map-get($theme-data, $color);
+            // Uses default theme value if value not found in current theme
+            @if (not map-has-key($themes, $color)) {
+                $theme-value: map-get($default-data, $color);
+            }
+
+			-webkit-box-shadow: $values $theme-value;
+			-moz-box-shadow: $values $theme-value;
+			box-shadow: $values $theme-value;
         }
 	}
 }
