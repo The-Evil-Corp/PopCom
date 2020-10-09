@@ -28,4 +28,5 @@ rules:
   react/jsx-indent-props:
     - 'error'
     - 4
+  react/prop-types: 0
   import/prefer-default-export: 0
