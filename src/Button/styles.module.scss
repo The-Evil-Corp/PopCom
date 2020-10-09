@@ -1,3 +1,9 @@
+@import '../utils/_mixins';
+
 .Button {
+    @include theme-aware(
+        'background-color', 
+        'color-background-button',
+    );
     border-radius: 0.5rem;
 }
