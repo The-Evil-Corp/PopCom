@@ -26,7 +26,13 @@
     }
 
 	&:not(:disabled):active:focus {
+        @include theme-aware-shadow(0 4px, 'color-shadow-button-primary');
+
 		transform: translateY(2px);
-		border: none;
+        border: none;
+        
+        &.success {
+            @include theme-aware-shadow(0 4px, 'color-shadow-button-success');
+        }
 	}
 }
