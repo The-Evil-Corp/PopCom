@@ -18,3 +18,14 @@ export const button = () => {
         </div>
     );
 };
+
+export const buttonDisabled = () => {
+    const message = text('Text', 'Click Here');
+    const theme = select('Theme', Themes, Themes.Default);
+
+    return (
+        <div className={`theme-${theme}`}>
+            <Button text={message} disabled />
+        </div>
+    );
+};
