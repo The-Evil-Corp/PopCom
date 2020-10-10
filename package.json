@@ -2,7 +2,7 @@
   "name": "popcom",
   "version": "1.0.0",
   "description": "A hip, sexy, eye-candy React component library.",
-  "main": "dist/popcom.js",
+  "main": "./dist/index.js",
   "files": [
     "dist"
   ],
@@ -27,7 +27,11 @@
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
     "@storybook/react": "^6.0.26",
-    "babel-loader": "^8.1.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
     "clean-webpack-plugin": "^3.0.0",
     "eslint": "^7.10.0",
     "eslint-config-airbnb": "^18.2.0",
