@@ -1,6 +1,6 @@
 import React from 'react';
 import { withKnobs, text, select } from '@storybook/addon-knobs';
-import { Button } from './index';
+import { Button } from './Button';
 import Themes from '../utils/themes';
 
 export default {
