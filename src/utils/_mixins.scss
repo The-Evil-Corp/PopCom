@@ -27,7 +27,7 @@
             #{$key}: $theme-value;
         }
     }
-}
+};
 
 @mixin theme-aware-shadow($values, $color) {
     $default-data: map-get($themes, default);
@@ -49,4 +49,4 @@
 			box-shadow: $values $theme-value;
         }
 	}
-}
+};

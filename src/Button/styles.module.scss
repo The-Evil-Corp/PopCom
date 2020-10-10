@@ -1,9 +1,9 @@
 @import '../utils/_mixins';
 
 .Button {
-    @include theme-aware('background-color', 'color-background-button');
     @include theme-aware('color', 'color-text');
-    @include theme-aware-shadow(0 6px, 'color-shadow-button');
+    @include theme-aware('background-color', 'color-background-button-primary');
+    @include theme-aware-shadow(0 6px, 'color-shadow-button-primary');
 
     border-radius: 0.5rem;
 	border: none;
@@ -11,9 +11,15 @@
     padding: 0.375rem 0.75rem;
     cursor: pointer;
 
-    &:disabled {
-        @include theme-aware('background-color', 'color-background-button-disabled');
+    &.success {
         @include theme-aware('color', 'color-text');
+        @include theme-aware('background-color', 'color-background-button-success');
+        @include theme-aware-shadow(0 6px, 'color-shadow-button-success');
+    }
+
+    &:disabled {
+        @include theme-aware('color', 'color-text');
+        @include theme-aware('background-color', 'color-background-button-disabled');
         @include theme-aware-shadow(0 6px, 'color-shadow-button-disabled');
 
         cursor: not-allowed;
