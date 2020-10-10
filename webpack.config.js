@@ -3,7 +3,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
-    entry: path.join(__dirname, 'src', 'index.js'),
+    entry: path.join(__dirname, 'index.js'),
+    resolve: {
+      extensions:['.js']  
+    },
     devtool: 'source-map',
     externals: [nodeExternals()],
     output: {
@@ -18,7 +21,10 @@ module.exports = {
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                use: 'babel-loader',
+                loader:'babel-loader',
+                query: {
+                    presets: ['es2015', 'react']
+                }
             },
             { 
                 test: /\.module\.scss$/,
@@ -29,6 +35,6 @@ module.exports = {
                 ],
                 include: path.resolve(__dirname, './src')
             }
-        ]
+        ],
     }
 }
