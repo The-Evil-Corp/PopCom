@@ -14,6 +14,8 @@ export const button = () => {
     return (
         <div className={`theme-${theme}`}>
             <Button text="Primary" />
+            <Button text="Brand" variant="brand" />
+            <Button text="Light" variant="light" />
             <Button text="Success" variant="success" />
             <Button text="Disabled" disabled />
         </div>

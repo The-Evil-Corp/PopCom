@@ -13,14 +13,25 @@
     outline: none;
     cursor: pointer;
 
+    &.brand {
+        @include theme-aware('background-color', 'color-background-button-brand');
+        @include theme-aware-shadow(0 6px, 'color-shadow-button-brand');
+    }
+
+    &.light {
+        @include theme-aware('color', 'color-text-inverted');
+        @include theme-aware('background-color', 'color-background-button-light');
+        @include theme-aware('border-color', 'color-border-button-light');
+        @include theme-aware-shadow(0 6px, 'color-shadow-button-light');
+        border: 2px solid;
+    }
+
     &.success {
-        @include theme-aware('color', 'color-text');
         @include theme-aware('background-color', 'color-background-button-success');
         @include theme-aware-shadow(0 6px, 'color-shadow-button-success');
     }
 
     &:disabled {
-        @include theme-aware('color', 'color-text');
         @include theme-aware('background-color', 'color-background-button-disabled');
         @include theme-aware-shadow(0 6px, 'color-shadow-button-disabled');
 
@@ -33,6 +44,16 @@
 		transform: translateY(2px);
         border: none;
         
+        &.brand {
+            @include theme-aware-shadow(0 4px, 'color-shadow-button-brand');
+        }
+
+        &.light {
+            @include theme-aware-shadow(0 4px, 'color-shadow-button-light');
+            @include theme-aware('border-color', 'color-border-button-light');
+            border: 2px solid;
+        }
+
         &.success {
             @include theme-aware-shadow(0 4px, 'color-shadow-button-success');
         }
