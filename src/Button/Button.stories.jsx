@@ -15,7 +15,7 @@ export const button = () => {
         <div className={`theme-${theme}`}>
             <Button>Primary</Button>
             <Button variant="brand">Brand</Button>
-            <Button variant="light">Light</Button>
+            <Button variant="themed">Themed</Button>
             <Button variant="success">Success</Button>
             <Button disabled>Disabled</Button>
         </div>

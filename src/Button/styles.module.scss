@@ -18,12 +18,13 @@
         @include theme-aware-shadow(0 6px, 'color-shadow-button-brand');
     }
 
-    &.light {
+    &.themed {
         @include theme-aware('color', 'color-text-inverted');
-        @include theme-aware('background-color', 'color-background-button-light');
-        @include theme-aware('border-color', 'color-border-button-light');
-        @include theme-aware-shadow(0 6px, 'color-shadow-button-light');
+        @include theme-aware('background-color', 'color-background-button-themed');
+        @include theme-aware('border-color', 'color-border-button-themed');
+        @include theme-aware-shadow(0 6px, 'color-shadow-button-themed');
         border: 2px solid;
+        border-bottom-width: 0;
     }
 
     &.success {
@@ -48,10 +49,11 @@
             @include theme-aware-shadow(0 4px, 'color-shadow-button-brand');
         }
 
-        &.light {
-            @include theme-aware-shadow(0 4px, 'color-shadow-button-light');
-            @include theme-aware('border-color', 'color-border-button-light');
+        &.themed {
+            @include theme-aware-shadow(0 4px, 'color-shadow-button-themed');
+            @include theme-aware('border-color', 'color-border-button-themed');
             border: 2px solid;
+            border-bottom-width: 0;
         }
 
         &.success {
