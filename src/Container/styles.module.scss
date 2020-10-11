@@ -1,0 +1,21 @@
+@import '../utils/_mixins';
+
+.Container {
+    @include theme-aware('color', 'color-text-inverted');
+    @include theme-aware('background-color', 'color-background');
+
+    outline: none;
+
+    display: flex;
+    flex-direction: column;
+
+    // width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &.horizontal {
+        flex-direction: row;
+    }
+}
