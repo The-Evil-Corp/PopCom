@@ -1,0 +1,16 @@
+@import '../utils/_mixins';
+
+.Card {
+    @include theme-aware('color', 'color-text-inverted');
+    @include theme-aware('background-color', 'color-background-card');
+    @include theme-aware('border-color', 'color-border-card');
+
+    display:flex;
+
+    border-radius: 12px;
+    border: 2px solid;
+    outline: none;
+
+	margin: 1rem;
+    padding: 0.5rem 1rem;
+}
