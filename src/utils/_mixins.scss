@@ -20,7 +20,7 @@
             // $theme-value: value for the theme property
             $theme-value: map-get($theme-data, $color);
             // Uses default theme value if value not found in current theme
-            @if (not map-has-key($themes, $color)) {
+            @if (not map-has-key($theme-data, $color)) {
                 $theme-value: map-get($default-data, $color);
             }
 
@@ -40,7 +40,7 @@
             // $theme-value: value for the theme property
             $theme-value: map-get($theme-data, $color);
             // Uses default theme value if value not found in current theme
-            @if (not map-has-key($themes, $color)) {
+            @if (not map-has-key($theme-data, $color)) {
                 $theme-value: map-get($default-data, $color);
             }
 
