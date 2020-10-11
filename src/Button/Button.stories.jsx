@@ -13,11 +13,11 @@ export const button = () => {
 
     return (
         <div className={`theme-${theme}`}>
-            <Button text="Primary" />
-            <Button text="Brand" variant="brand" />
-            <Button text="Light" variant="light" />
-            <Button text="Success" variant="success" />
-            <Button text="Disabled" disabled />
+            <Button>Primary</Button>
+            <Button variant="brand">Brand</Button>
+            <Button variant="light">Light</Button>
+            <Button variant="success">Success</Button>
+            <Button disabled>Disabled</Button>
         </div>
     );
 };

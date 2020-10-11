@@ -15,8 +15,8 @@ export const card = () => {
     return (
         <div className={`theme-${theme}`}>
             <Card>
-                <Button text="Sample" />
-                <Button text="Sample" />
+                <Button>Sample</Button>
+                <Button>Sample</Button>
             </Card>
 
             <Card>
