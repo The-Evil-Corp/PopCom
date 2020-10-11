@@ -17,6 +17,7 @@ export const button = () => {
             <Button variant="brand">Brand</Button>
             <Button variant="themed">Themed</Button>
             <Button variant="success">Success</Button>
+            <Button variant="warning">Warning</Button>
             <Button disabled>Disabled</Button>
         </div>
     );

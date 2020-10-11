@@ -32,6 +32,11 @@
         @include theme-aware-shadow(0 6px, 'color-shadow-button-success');
     }
 
+    &.warning {
+        @include theme-aware('background-color', 'color-background-button-warning');
+        @include theme-aware-shadow(0 6px, 'color-shadow-button-warning');
+    }
+
     &:disabled {
         @include theme-aware('background-color', 'color-background-button-disabled');
         @include theme-aware-shadow(0 6px, 'color-shadow-button-disabled');
@@ -58,6 +63,10 @@
 
         &.success {
             @include theme-aware-shadow(0 4px, 'color-shadow-button-success');
+        }
+
+        &.warning {
+            @include theme-aware-shadow(0 4px, 'color-shadow-button-warning');
         }
 	}
 }
