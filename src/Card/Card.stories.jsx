@@ -1,6 +1,7 @@
 import React from 'react';
 import { withKnobs, select } from '@storybook/addon-knobs';
 import { Card } from './Card';
+import { Button } from '../Button/Button';
 import Themes from '../utils/themes';
 
 export default {
@@ -14,7 +15,8 @@ export const card = () => {
     return (
         <div className={`theme-${theme}`}>
             <Card>
-                <button type="button">Sample Element</button>
+                <Button text="Sample" />
+                <Button text="Sample" />
             </Card>
 
             <Card>
