@@ -11,7 +11,7 @@ export default {
 
 export const card = () => {
     const theme = select('Theme', Themes, Themes.Default);
-
+    const markdownSampleText = '# This is a heading.\n\nThis is normal text.\n\n```python x = set() #This is python  ```\n\n';
     return (
         <div className={`theme-${theme}`}>
             <Card>
@@ -40,6 +40,10 @@ export const card = () => {
                     Aliquam suscipit turpis varius, dignissim ligula sed, tempus orci.
                     Pellentesque eget ligula tellus. Suspendisse potenti.
                 </p>
+            </Card>
+
+            <Card markdownEnabled vertical>
+                {markdownSampleText}
             </Card>
         </div>
     );
