@@ -5,7 +5,7 @@
     @include theme-aware('background-color', 'color-background-card');
     @include theme-aware('border-color', 'color-border-card');
 
-    display:flex;
+    display: flex;
 
     border-radius: 12px;
     border: 2px solid;
@@ -13,4 +13,8 @@
 
 	margin: 1rem;
     padding: 0.5rem 1rem;
+
+    &.vertical {
+        flex-direction: column;
+    }
 }

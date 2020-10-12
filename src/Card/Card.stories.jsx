@@ -15,7 +15,12 @@ export const card = () => {
     return (
         <div className={`theme-${theme}`}>
             <Card>
+                <Button>Horizontal</Button>
                 <Button>Sample</Button>
+            </Card>
+
+            <Card vertical>
+                <Button>Vertical</Button>
                 <Button>Sample</Button>
             </Card>
 
