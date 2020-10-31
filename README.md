@@ -6,7 +6,7 @@
 
 > A hip, sexy, eye-candy React component library.
 
-[![NPM](https://img.shields.io/npm/v/pop-com.svg)](https://www.npmjs.com/package/popcom)
+[![NPM](https://img.shields.io/npm/v/popcom.svg)](https://www.npmjs.com/package/popcom)
 
 ## Install
 
