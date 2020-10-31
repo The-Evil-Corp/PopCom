@@ -4,6 +4,7 @@ import styles from './styles.module.scss';
 export const Container = ({
     children,
     theme = 'default',
+    className = '',
     horizontal,
 }) => (
     <div className={`theme-${theme}`}>
@@ -11,6 +12,7 @@ export const Container = ({
             className={`
             ${styles.Container}
             ${horizontal ? styles.horizontal : ''}
+            ${className}
         `}
         >
             { children }
